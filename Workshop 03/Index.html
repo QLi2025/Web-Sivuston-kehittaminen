@@ -6,8 +6,9 @@
     <title>Quy Li's Personal Page</title>
     <style>
         h2 {
-          color: rgb(92, 6, 22);
+          color: rgb(19, 0, 128);
         }
+        
         /* Task 1: CSS Transitions */
         .transition-button {
           background-color: lightblue;
@@ -22,17 +23,133 @@
           background-color: lightcoral;
         }
         
-
-
-        </style>
-    <link rel="stylesheet" href="styles.css">
+        /* Task 2: CSS Animations */
+        .animation-box {
+          width: 50px;
+          height: 50px;
+          background-color: lightgreen;
+          position: relative;
+          animation: move 2s infinite alternate;
+          margin: 20px 0;
+        }
+        
+        @keyframes move {
+          from {
+            left: 0;
+          }
+          to {
+            left: 100px;
+          }
+        }
+        
+        /* Task 3: CSS Pseudo-classes */
+        .pseudo-list {
+          list-style-type: none;
+          padding: 0;
+          width: 200px;
+        }
+        
+        .pseudo-list li {
+          padding: 8px;
+          margin: 2px 0;
+        }
+        
+        .pseudo-list li:nth-child(odd) {
+          background-color: lightgray;
+        }
+        
+        .pseudo-list li:nth-child(even) {
+          background-color: white;
+        }
+        
+        /* Task 4: CSS Filters */
+        .filter-image {
+          filter: grayscale(100%);
+          transition: filter 0.3s ease;
+          width: 300px;
+          margin-top: 20px;
+        }
+        
+        .filter-image:hover {
+          filter: grayscale(0%);
+        }
+        
+        /* Task 5: CSS Pseudo-elements */
+        .quote {
+          position: relative;
+          padding-left: 40px;
+          font-style: italic;
+          font-size: 1.2em;
+          color: #555;
+        }
+        
+        .quote::before {
+          content: '“';
+          font-size: 60px;
+          position: absolute;
+          left: 0;
+          top: -15px;
+          color: lightgray;
+        }
+        
+        /* Additional styling for the page */
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+        }
+        
+        table, th, td {
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          padding: 10px;
+          text-align: left;
+        }
+        
+        th {
+          background-color: #f2f2f2;
+        }
+        
+        form {
+          display: grid;
+          gap: 10px;
+          max-width: 500px;
+        }
+        
+        input, textarea {
+          padding: 8px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          cursor: pointer;
+          width: 150px;
+        }
+        
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <h1 style="color: rgb(10, 15, 16);">Welcome to Quy Li's Personal Page</h1>
     <p>Hello! I'm an Information Technology student at Laurea passionate about creating user-friendly websites. 
     I enjoy learning HTML, CSS, and JavaScript, and in my free time I like playing tennis and chess.</p>
     
-    <img src="./MyPhoto1.jpg" alt="Quy Li outdoor" width="300"/>
+    <img src="./MyPhoto1.jpg" alt="Quy Li outdoor" width="300" class="filter-image"/>
 
     <h2>My Hobbies (Ordered by Preference)</h2>
     <ol>
@@ -43,39 +160,48 @@
     </ol>
     
     <h2>Other Interests (Unordered List)</h2>
-    <ul>
+    <ul class="pseudo-list">
         <li>Photography</li>
         <li>Following NBA sports online</li>
         <li>Watching movies</li>
         <li>Attending exhibitions</li>
     </ul>
     
+    <button class="transition-button">Hover me</button>
+    
+    <div class="animation-box"></div>
+    
+    <blockquote class="quote">
+        "The computer was born to solve problems that did not exist before."
+    </blockquote>
+    
     <p>Check out my favorite school: 
     <a href="https://www.laurea.fi" target="_blank" rel="noopener noreferrer">Visit Laurea UAS homepage</a></p>
-   <div> 
-    <h2>My Current Courses</h2>
-    <table>
-        <tr>
-            <th>Course Code</th>
-            <th>Course Name</th>
-            <th>Credits</th>
-        </tr>
-        <tr>
-            <td>NC00CC04-3001</td>
-            <td>Web Development Fundamentals</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>HL00BY89-3034</td>
-            <td>Professional Communication in English</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>E9955-3009</td>
-            <td>Linux Operating System</td>
-            <td>5</td>
-        </tr>
-    </table>
+   
+    <div> 
+        <h2>My Current Courses</h2>
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+            </tr>
+            <tr>
+                <td>NC00CC04-3001</td>
+                <td>Web Development Fundamentals</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>HL00BY89-3034</td>
+                <td>Professional Communication in English</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>E9955-3009</td>
+                <td>Linux Operating System</td>
+                <td>5</td>
+            </tr>
+        </table>
     </div>
     
     <h2>Contact Me</h2>
